@@ -1,12 +1,15 @@
 {
-  "name": "ai-powered-faq-generator",
+  "name": "ai-faq-generator",
   "version": "1.0.0",
   "description": "An AI-powered tool for generating FAQ sections for small businesses",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "test": "jest"
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "test": "cd backend && npm test && cd ../frontend && npm test"
   },
   "keywords": [
     "AI",
@@ -16,14 +19,7 @@
   ],
   "author": "Your Name",
   "license": "MIT",
-  "dependencies": {
-    "express": "^4.17.1",
-    "dotenv": "^10.0.0",
-    "cors": "^2.8.5",
-    "axios": "^0.21.1"
-  },
   "devDependencies": {
-    "nodemon": "^2.0.7",
-    "jest": "^27.0.6"
+    "concurrently": "^6.2.0"
   }
 }

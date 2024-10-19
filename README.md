@@ -2,6 +2,26 @@
 
 This project is an AI-powered tool that allows small businesses to generate FAQ sections automatically by analyzing product descriptions or customer queries.
 
+## Project Structure
+ai-faq-generator/
+├── backend/
+│   ├── node_modules/
+│   ├── .env
+│   ├── groqAI.js
+│   ├── package.json
+│   └── server.js
+├── frontend/
+│   ├── node_modules/
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   └── ...
+├── .gitignore
+├── LICENSE
+├── package.json
+└── README.md
+
+
 ## Features
 
 - Automatic FAQ generation using Groq AI
@@ -15,16 +35,18 @@ This project is an AI-powered tool that allows small businesses to generate FAQ 
 ## Tech Stack
 
 - Backend: Node.js with Express
-- Frontend: React
+- Frontend: React (to be implemented)
 - AI Integration: Groq AI API
 - Version Control: Git
 
 ## Getting Started
 
 1. Clone the repository
-2. Install dependencies with `npm install`
-3. Set up environment variables (see `.env.example`)
-4. Run the development server with `npm run dev`
+2. Install dependencies: npm install
+cd backend && npm install
+3. Set up environment variables in `backend/.env`
+4. Run the development server: npm run dev
+
 
 ## Contributing
 
